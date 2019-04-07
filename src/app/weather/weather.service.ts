@@ -52,9 +52,6 @@ export class WeatherService implements IWeatherService {
       return this.httpClient
         .get<ICurrentWeatherData>(
           `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${environment.appId}`
-        ).pipe(
-          map(data => this.transformToICurrentWeather(data)
-          )
-        )
+        ).pipe(map(data => this.transformToICurrentWeather(data)))
     }
 }
