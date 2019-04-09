@@ -1,3 +1,3 @@
-FROM duluca/minimal-node-web-server:latest
+FROM starrynights89/forecast-weather-app:latest
 WORKDIR /usr/src/app
 COPY dist public
