@@ -4,12 +4,14 @@ import { AppComponent } from './app.component'
 import { CurrentWeatherComponent } from './current-weather/current-weather.component'
 import { WeatherService } from './weather/weather.service'
 import { WeatherServiceFake } from './weather/weather.service.fake'
+import { MaterialModule } from './material.module'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule, MaterialModule, NoopAnimationsModule
       ],
       declarations: [
         AppComponent, CurrentWeatherComponent
@@ -34,6 +36,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.debugElement.nativeElement
-    expect(compiled.querySelector('h1').textContent).toContain('Weather Forecast')
+    expect(compiled.querySelector('span').textContent).toContain('Weather Forecast')
   })
 })
