@@ -4,7 +4,7 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
-  MatToolbarModule
+  MatToolbarModule,
 } from '@angular/material'
 import { NgModule } from '@angular/core'
 
@@ -15,7 +15,7 @@ import { NgModule } from '@angular/core'
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   exports: [
     MatButtonModule,
@@ -23,7 +23,7 @@ import { NgModule } from '@angular/core'
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
 })
 export class MaterialModule {}

@@ -10,6 +10,7 @@ import { WeatherService } from './weather/weather.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SideNavComponent } from './side-nav/side-nav.component'
 import { LayoutModule } from '@angular/cdk/layout'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 //import { MaterialModule } from './/material.module'
 import {
   MatToolbarModule,
@@ -17,14 +18,18 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
 } from '@angular/material'
+import { CitySearchComponent } from './city-search/city-search.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrentWeatherComponent,
-    SideNavComponent
+    SideNavComponent,
+    CitySearchComponent
   ],
   imports: [
     BrowserModule,
@@ -33,12 +38,16 @@ import {
     BrowserAnimationsModule,
     FlexLayoutModule,
     LayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [WeatherService],
   bootstrap: [AppComponent]
