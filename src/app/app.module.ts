@@ -10,6 +10,7 @@ import { WeatherService } from './weather/weather.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SideNavComponent } from './side-nav/side-nav.component'
 import { LayoutModule } from '@angular/cdk/layout'
+//import { MaterialModule } from './/material.module'
 import {
   MatToolbarModule,
   MatButtonModule,
