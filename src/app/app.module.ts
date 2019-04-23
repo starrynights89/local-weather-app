@@ -22,6 +22,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
 } from '@angular/material'
+import { CitySearchTpldrivenComponent } from './city-search-tpldriven/city-search-tpldriven.component'
 import { CitySearchComponent } from './city-search/city-search.component'
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CitySearchComponent } from './city-search/city-search.component'
     AppComponent,
     CurrentWeatherComponent,
     SideNavComponent,
-    CitySearchComponent
+    CitySearchComponent,
+    CitySearchTpldrivenComponent
   ],
   imports: [
     BrowserModule,
