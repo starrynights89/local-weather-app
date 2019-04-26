@@ -17,11 +17,11 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService.currentWeather.subscribe(data => (this.current = data))
   }
 
+  // Attribution: https://stackoverflow.com/a/44418732/178620
   getOrdinal(date: number) {
     const n = new Date(date).getDate()
     return n > 0
       ? ['th', 'st', 'nd', 'rd'][(n > 3 && n < 21) || n % 10 > 3 ? 0 : n % 10]
       : ''
   }
-
 }
