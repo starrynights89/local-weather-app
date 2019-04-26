@@ -9,7 +9,7 @@ import { debounceTime } from 'rxjs/operators'
   styleUrls: ['./city-search.component.css']
 })
 export class CitySearchComponent implements OnInit {
-  search = new FormControl('', [Validators.minLength(2)])
+  search = new FormControl('', [Validators.required, Validators.minLength(2)])
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
@@ -18,10 +18,10 @@ export class CitySearchComponent implements OnInit {
       .subscribe((searchValue: string) => {
         if (!this.search.invalid) {
           const userInput = searchValue.split(',').map(s => s.trim())
-          this.weatherService.getCurrentWeather(
+          this.weatherService.updateCurrentWeather(
             userInput[0],
             userInput.length > 1 ? userInput[1] : undefined
-          ).subscribe(data => (console.log(data)))
+          )//.subscribe(data => (console.log(data)))
         }
       })
   }
